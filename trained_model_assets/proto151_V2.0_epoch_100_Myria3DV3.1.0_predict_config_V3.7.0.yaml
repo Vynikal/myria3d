@@ -119,7 +119,7 @@ datamodule:
   points_pre_transform:
     _target_: functools.partial
     _args_:
-    - ${get_method:myria3d.pctl.points_pre_transform.lidar_hd.lidar_hd_pre_transform}
+    - ${get_method:myria3d.pctl.points_pre_transform.dfc2019.dfc2019_pre_transform}
   pre_filter:
     _target_: functools.partial
     _args_:
