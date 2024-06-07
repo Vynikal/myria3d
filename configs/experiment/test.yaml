@@ -15,7 +15,7 @@ datamodule:
   # override if needed
   # test_data_dir: "path/to_dir/with/annotated/files.las"
   # larger batch size for speed
-  batch_size: 50 
+  batch_size: 10 
 
 model:
   ckpt_path: "path/to/checkpoint"  # override

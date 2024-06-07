@@ -8,8 +8,6 @@ RETURN_NUMBER_NORMALIZATION_MAX_VALUE = 4.0
 def dfc2019_pre_transform(points):
     """Turn pdal points into torch-geometric Data object.
 
-    Builds a composite (average) color channel on the fly.     Calculate NDVI on the fly.
-
     Args:
         las_filepath (str): path to the LAS file.
 
@@ -22,33 +20,18 @@ def dfc2019_pre_transform(points):
 
     # normalization
     points["ReturnNumber"] = (points["ReturnNumber"]) / (RETURN_NUMBER_NORMALIZATION_MAX_VALUE)
-
-    npoints = points["X"].size
-    zeros = np.asarray(np.zeros((7, npoints)), dtype=np.float32)
-
+    
     # todo
-    x = np.concatenate((
-        [
+    x = np.array([
             points[name]
             for name in [
                 "Intensity",
                 "ReturnNumber",
             ]
-        ]
-        ,zeros),
-        axis=0,
-    ).transpose()
-    print(np.shape(x))
+        ]).transpose()
     x_features_names = [
         "Intensity",
         "ReturnNumber",
-        "NumberOfReturns",
-        "Red",
-        "Green",
-        "Blue",
-        "Infrared",
-        "rgb_avg",
-        "ndvi",
     ]
     y = points["Classification"]
 
