@@ -33,18 +33,18 @@ class ModelMetrics(Callback):
 
     def _metrics_factory(self, by_class=False):
         average = None if by_class else "micro"
-        average_iou = None if by_class else "macro"  # special case, only mean IoU is of interest
+        average_macro = None if by_class else "macro"  # special case, only mean IoU is of interest
 
         return {
             "acc": Accuracy(task="multiclass", num_classes=self.num_classes, average=average),
             "precision": Precision(
-                task="multiclass", num_classes=self.num_classes, average=average
+                task="multiclass", num_classes=self.num_classes, average=average_macro
             ),
-            "recall": Recall(task="multiclass", num_classes=self.num_classes, average=average),
-            "f1": F1Score(task="multiclass", num_classes=self.num_classes, average=average),
+            "recall": Recall(task="multiclass", num_classes=self.num_classes, average=average_macro),
+            "f1": F1Score(task="multiclass", num_classes=self.num_classes, average=average_macro),
             # DEBUG: checking that this iou matches the one from model.py before removing it
             "iou": JaccardIndex(
-                task="multiclass", num_classes=self.num_classes, average=average_iou
+                task="multiclass", num_classes=self.num_classes, average=average_macro
             ),
         }
 
