@@ -125,6 +125,7 @@ if __name__ == "__main__":
         launch_predict()
 
     elif task_name == TASK_NAMES.HDF5.value:
+        dotenv.load_dotenv(os.path.join(DEFAULT_DIRECTORY, DEFAULT_ENV))
         launch_hdf5()
 
     else:
