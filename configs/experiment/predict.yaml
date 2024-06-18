@@ -10,8 +10,8 @@ task:
   task_name: "predict"
 
 predict:
-  src_las: "/path/to/input.las"  # Any glob pattern can be used to predict on multiple files.
-  output_dir: "/path/to/output_dir/"  # Predictions are saved in a new file which shares src_las basename.
+  src_las: "/home/kuba/myria3d/data/test/*.las"  # Any glob pattern can be used to predict on multiple files.
+  output_dir: "/home/kuba/myria3d/data/output"  # Predictions are saved in a new file which shares src_las basename.
   ckpt_path: "/path/to/lightning_model.ckpt"  # Checkpoint of trained model.
   # + other params in configs/predict/default.yaml
 
