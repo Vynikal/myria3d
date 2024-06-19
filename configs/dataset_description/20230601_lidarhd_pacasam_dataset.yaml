@@ -12,5 +12,5 @@ classification_preprocessing_dict: {3: 5, 4: 5, 0: 1, 66: 65, 100: 1, 101: 1}
 classification_dict: {1: "unclassified", 2: "ground", 5: vegetation, 6: "building", 9: water, 17: bridge, 64: lasting_above}
 
 # Input and output dims of neural net are dataset dependant:
-d_in: 9
+d_in: 2
 num_classes: 7

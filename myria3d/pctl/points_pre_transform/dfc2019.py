@@ -2,7 +2,7 @@
 import numpy as np
 from torch_geometric.data import Data
 
-RETURN_NUMBER_NORMALIZATION_MAX_VALUE = 4.0
+RETURN_NUMBER_NORMALIZATION_MAX_VALUE = 7.0
 
 
 def dfc2019_pre_transform(points):
