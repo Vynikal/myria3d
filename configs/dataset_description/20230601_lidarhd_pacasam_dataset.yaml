@@ -11,6 +11,11 @@ classification_preprocessing_dict: {3: 5, 4: 5, 0: 1, 66: 65, 100: 1, 101: 1}
 # classification_dict = {code_int: name_str, ...} and MUST be sorted (increasing order).
 classification_dict: {1: "unclassified", 2: "ground", 5: vegetation, 6: "building", 9: water, 17: bridge, 64: lasting_above}
 
+# class_weights for the CrossEntropyLoss with format "[[w1,w2,w3...,wk]]" with w_i a float e.g. 1.0
+# Balanced CE: arbitrary weights based on heuristic.
+# class_weights: [2.5,1.0,1.0,5.0,20.0,20.0,20.0] normalized so they sum to 7 to preserve scale of CELoss
+class_weights: [0.2,0.1,0.1,1.5,1.7,1.7,1.7]
+
 # Input and output dims of neural net are dataset dependant:
-d_in: 2
+d_in: 3
 num_classes: 7

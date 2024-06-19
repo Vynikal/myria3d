@@ -2,7 +2,7 @@
 import numpy as np
 from torch_geometric.data import Data
 
-RETURN_NUMBER_NORMALIZATION_MAX_VALUE = 7.0
+RETURN_NUMBER_NORMALIZATION_MAX_VALUE = 10.0
 
 
 def dfc2019_pre_transform(points):
@@ -20,6 +20,9 @@ def dfc2019_pre_transform(points):
 
     # normalization
     points["ReturnNumber"] = (points["ReturnNumber"]) / (RETURN_NUMBER_NORMALIZATION_MAX_VALUE)
+    points["NumberOfReturns"] = (points["NumberOfReturns"]) / (
+        RETURN_NUMBER_NORMALIZATION_MAX_VALUE
+    )
     
     # todo
     x = np.array([
