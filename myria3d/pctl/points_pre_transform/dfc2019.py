@@ -30,11 +30,13 @@ def dfc2019_pre_transform(points):
             for name in [
                 "Intensity",
                 "ReturnNumber",
+                "NumberOfReturns"
             ]
         ]).transpose()
     x_features_names = [
         "Intensity",
         "ReturnNumber",
+        "NumberOfReturns"
     ]
     y = points["Classification"]
 
