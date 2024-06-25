@@ -11,7 +11,7 @@ from myria3d.utils import utils
 log = utils.get_logger(__name__)
 
 MODEL_ZOO = [PyGRandLANet, PointNet]
-
+torch.set_float32_matmul_precision("medium")
 
 def get_neural_net_class(class_name: str) -> nn.Module:
     """A Class Factory to class of neural net based on class name.
