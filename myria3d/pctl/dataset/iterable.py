@@ -10,6 +10,8 @@ from myria3d.pctl.dataset.utils import (
     pre_filter_below_n_points,
     split_cloud_into_samples,
 )
+from myria3d.pctl.points_pre_transform.lidar_hd import lidar_hd_pre_transform
+from myria3d.pctl.points_pre_transform.lidar_hd_norgb import lidar_hd_norgb_pre_transform
 from myria3d.pctl.points_pre_transform.dfc2019 import dfc2019_pre_transform
 
 
@@ -20,7 +22,7 @@ class InferenceDataset(IterableDataset):
         self,
         las_file: str,
         epsg: str,
-        points_pre_transform: Callable[[ArrayLike], Data] = dfc2019_pre_transform,
+        points_pre_transform: Callable[[ArrayLike], Data] = lidar_hd_pre_transform,
         pre_filter: Optional[Callable[[Data], bool]] = pre_filter_below_n_points,
         transform: Optional[Callable[[Data], Data]] = None,
         tile_width: Number = 1000,

@@ -16,6 +16,8 @@ from myria3d.pctl.dataset.utils import (
     pre_filter_below_n_points,
     split_cloud_into_samples,
 )
+from myria3d.pctl.points_pre_transform.lidar_hd import lidar_hd_pre_transform
+from myria3d.pctl.points_pre_transform.lidar_hd_norgb import lidar_hd_norgb_pre_transform
 from myria3d.pctl.points_pre_transform.dfc2019 import dfc2019_pre_transform
 from myria3d.utils import utils
 
@@ -30,7 +32,7 @@ class HDF5Dataset(Dataset):
         hdf5_file_path: str,
         epsg: str,
         las_paths_by_split_dict: LAS_PATHS_BY_SPLIT_DICT_TYPE,
-        points_pre_transform: Callable = dfc2019_pre_transform,
+        points_pre_transform: Callable = lidar_hd_pre_transform,
         tile_width: Number = 1000,
         subtile_width: Number = 50,
         subtile_overlap_train: Number = 0,
@@ -202,7 +204,7 @@ def create_hdf5(
     subtile_width: Number = 50,
     pre_filter: Optional[Callable[[Data], bool]] = pre_filter_below_n_points,
     subtile_overlap_train: Number = 0,
-    points_pre_transform: Callable = dfc2019_pre_transform,
+    points_pre_transform: Callable = lidar_hd_pre_transform,
 ):
     """Create a HDF5 dataset file from las.
 

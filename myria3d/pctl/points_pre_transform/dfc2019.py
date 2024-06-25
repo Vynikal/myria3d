@@ -20,23 +20,18 @@ def dfc2019_pre_transform(points):
 
     # normalization
     points["ReturnNumber"] = (points["ReturnNumber"]) / (RETURN_NUMBER_NORMALIZATION_MAX_VALUE)
-    points["NumberOfReturns"] = (points["NumberOfReturns"]) / (
-        RETURN_NUMBER_NORMALIZATION_MAX_VALUE
-    )
     
     # todo
     x = np.array([
             points[name]
             for name in [
                 "Intensity",
-                "ReturnNumber",
-                "NumberOfReturns"
+                "ReturnNumber"
             ]
         ]).transpose()
     x_features_names = [
         "Intensity",
-        "ReturnNumber",
-        "NumberOfReturns"
+        "ReturnNumber"
     ]
     y = points["Classification"]
 

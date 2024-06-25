@@ -86,8 +86,6 @@ class PointNet(nn.Module):
     input_all=torch.cat((pos,x), axis=1)
     input=torch.Tensor(n_batch, self.num_features, self.subsample)
     out=torch.Tensor(n_batch, self.num_features+1, n_points)
-    print(input_all.shape)
-    print(input.shape)
 
     for i_batch in range(n_batch):
       b_idx = np.where(batch.cpu()==i_batch)
@@ -127,7 +125,6 @@ class PointNet(nn.Module):
     closest_point = closest_point.squeeze()
 
     out = pred[closest_point,:]
-    print(out.shape)
 
     return out
   
