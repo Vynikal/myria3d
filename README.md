@@ -35,24 +35,24 @@ ___
 
 # Comparisons
 <p float="left">
-  ----------------------Ground Truth-----------------------------------------------
-  PointNet---------------------------------------------------
-  RandLaNet-----------------------
+  ----------------Ground Truth-------------------------------
+  PointNet----------------------------------
+  RandLaNet---------------
 </p>
 <p float="left">
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/gt.png?raw=true" width="333" />
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/pointnet.png?raw=true" width="333" /> 
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/randlanet.png?raw=true" width="333" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/gt.png?raw=true" width="250" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/pointnet.png?raw=true" width="250" /> 
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/randlanet.png?raw=true" width="250" />
 </p>
 <p float="left">
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/gt.png?raw=true" width="333" />
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/pointnet.png?raw=true" width="333" /> 
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/randlanet.png?raw=true" width="333" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/gt.png?raw=true" width="250" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/pointnet.png?raw=true" width="250" /> 
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/randlanet.png?raw=true" width="250" />
 </p>
 <p float="left">
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/gt.png?raw=true" width="333" />
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/pointnet.png?raw=true" width="333" /> 
-  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/randlanet.png?raw=true" width="333" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/gt.png?raw=true" width="250" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/pointnet.png?raw=true" width="250" /> 
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/randlanet.png?raw=true" width="250" />
 </p>
 
 Please cite Myria3D if it helped your own research. Here is an example BibTex entry:
