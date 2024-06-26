@@ -72,9 +72,6 @@ class PointNet(nn.Module):
 
     self.MLP_3 = nn.Sequential(*modules)
 
-    if self.is_cuda:
-      self = self.cuda()
-
   def forward(self, x, pos, batch, ptr):
     """
     the forward function producing the embeddings for each point of 'input'
@@ -94,9 +91,6 @@ class PointNet(nn.Module):
       selected_points = np.random.choice(n_full, self.subsample)
       input_batch = full_cloud[selected_points]
       input[i_batch,:,:] = input_batch.T
-
-    if self.is_cuda: #put the input on the GPU (at the last moment)
-      input = input.cuda() #Batch_size x num_features x num_points
 
     #embed points, equation (1)
     b1_out = self.MLP_1(input)
