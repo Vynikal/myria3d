@@ -11,6 +11,26 @@ This fork includes option to train on Lidar HD data without RGB attributes. It a
 The training was performed on a laptop with 3070Ti GPU (8GB VRAM), 32 GB RAM and i7-12700H. Batch sizes were adapted to the specifications.
 PointNet implementation subsamples the 50x50m tiles to 4096 points, then upsamples with 1-nn. RandLaNet remains unchanged.
 
+To train PointNet:
+
+`python run.py experiment=PointNet_baseline`
+
+
+To train RandLaNet:
+
+`python run.py experiment=RandLaNet_base_run_FR`
+
+
+To infer PointNet model:
+
+`python run.py task.task_name='predict' predict.src_las='/path/to/las' predict.output_dir='/path/to/output' datamodule.epsg=2154 predict.ckpt_path='${hydra:runtime.cwd}/trained_model_assets/randlanet_norgb_epoch_028.ckpt' trainer.accelerator=gpu predict.gpus=[0]`
+
+(to achieve better results add `predict.subtile_overlap=25`)
+
+
+To infer RandLaNet model:
+
+`python run.py task.task_name='predict' predict.src_las='/path/to/las' predict.output_dir='/path/to/output' datamodule.epsg=2154 predict.ckpt_path='${hydra:runtime.cwd}/trained_model_assets/pointnet_norgb_epoch_020.ckpt' trainer.accelerator=gpu predict.gpus=[0]`
 ___
 
 Please cite Myria3D if it helped your own research. Here is an example BibTex entry:
