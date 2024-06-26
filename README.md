@@ -2,7 +2,7 @@
 
 # Myria3D: Aerial Lidar HD Semantic Segmentation with Deep Learning
 # Fork adapted to train/infer on non-colorized data
-
+</div>
 
 Myria3D is a deep learning library designed with a focused scope: the multiclass semantic segmentation of large scale, high density aerial Lidar points cloud.
 
