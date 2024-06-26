@@ -5,10 +5,10 @@ defaults:
 
 logger:
   comet:
-    experiment_name: "PointNet-(BatchSize10xBudget(300pts-40000pts))"
+    experiment_name: "PointNet-(BatchSize16xBudget(300pts-40000pts))"
 
 
-# Smaller BS : 10 x 40 000 (max) == 400 000 pts i.e. previous budget of 32 x 12 500pts.
+# Smaller BS : 16 x 4096
 datamodule:
   batch_size: 16
 
