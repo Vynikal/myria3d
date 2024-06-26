@@ -33,6 +33,28 @@ To infer RandLaNet model:
 `python run.py task.task_name='predict' predict.src_las='/path/to/las' predict.output_dir='/path/to/output' datamodule.epsg=2154 predict.ckpt_path='${hydra:runtime.cwd}/trained_model_assets/pointnet_norgb_epoch_020.ckpt' trainer.accelerator=gpu predict.gpus=[0]`
 ___
 
+# Comparisons
+<p float="left">
+  ----------------------Ground Truth-----------------------------------------------
+  PointNet---------------------------------------------------
+  RandLaNet-----------------------
+</p>
+<p float="left">
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/gt.png?raw=true" width="333" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/pointnet.png?raw=true" width="333" /> 
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex1/randlanet.png?raw=true" width="333" />
+</p>
+<p float="left">
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/gt.png?raw=true" width="333" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/pointnet.png?raw=true" width="333" /> 
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex2/randlanet.png?raw=true" width="333" />
+</p>
+<p float="left">
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/gt.png?raw=true" width="333" />
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/pointnet.png?raw=true" width="333" /> 
+  <img src="https://github.com/Vynikal/myria3d/blob/lidar_hd/im/ex3/randlanet.png?raw=true" width="333" />
+</p>
+
 Please cite Myria3D if it helped your own research. Here is an example BibTex entry:
 ```
 @misc{gaydon2022myria3d,
